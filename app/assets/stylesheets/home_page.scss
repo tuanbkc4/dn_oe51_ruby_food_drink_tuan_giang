@@ -1,0 +1,27 @@
+@import "nav.css";
+
+.hero-section{
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url("/assets/fd250e8e66469115150a8e17c58b6e70.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .logo{
+    background-attachment: fixed;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.hero-section .sub-heading{
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 300;
+}

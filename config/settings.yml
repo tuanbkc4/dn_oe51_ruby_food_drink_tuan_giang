@@ -1,0 +1,8 @@
+length:
+  l_6: 6
+  l_10: 10
+  l_50: 50
+  l_255: 255
+
+regex:
+  email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'

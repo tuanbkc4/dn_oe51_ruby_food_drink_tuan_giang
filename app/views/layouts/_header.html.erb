@@ -1,0 +1,29 @@
+<header class="nav navbar-fixed-top">
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav">
+        <div class="nav-items">
+          <a href="#"><img src="assets/logo2.jpg" class="brand-logo" alt=""></a>
+          <div class="search">
+            <input type="text" class="search-box" placeholder="search brand, product">
+            <button class="search-btn">search</button>
+          </div>
+          <div class="icon">
+            <a href="#"><ion-icon name="person-add-outline"></ion-icon></a>
+            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="links-container">
+        <li class="link-item"><a href="#" class="link">Home</a></li>
+        <li class="link-item"><a href="#" class="link">Food</a></li>
+        <li class="link-item"><a href="#" class="link">Pizza</a></li>
+        <li class="link-item"><a href="#" class="link">Hamburger</a></li>
+        <li class="link-item"><a href="#" class="link">KFC</a></li>
+        <li class="language"><%= link_to t(".english"), locale: :en %></li>
+        <li class="language"><%= link_to t(".vietnamese"), locale: :vi %></li>
+      </ul>
+    </nav>
+  </div>
+</header>

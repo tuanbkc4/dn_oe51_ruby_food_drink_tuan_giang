@@ -1,0 +1,6 @@
+en:
+  base_title: "Food and drink"
+  app:
+    views:
+      home:
+        title: "Home"
