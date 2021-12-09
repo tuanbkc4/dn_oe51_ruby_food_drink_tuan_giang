@@ -158,7 +158,8 @@ vi:
       checkout: "Thanh toán"
       back: "Tiếp tục Mua sắm"
       not_found: "Không tìm thấy mặt hàng trong giỏ hàng"
-      empty: "Giỏ hàng rỗng"
+      empty: "Giỏ hàng trống"
+      please_login: "Vui lòng đăng nhập"
   orders:
     list_order:
       heading: "Đơn hàng"
@@ -311,3 +312,21 @@ vi:
         price: "Giá (VNĐ)"
         rating: "Xếp hạng"
         submit: "Cập nhật"
+    orders:
+      index:
+        title: "Admin"
+        heading: "Quản lý order"
+        name: "Họ tên"
+        address: "Địa chỉ"
+        phone: "Số điện thoại"
+        total_price: "Tổng số tiền"
+        status: "Trạng thái"
+        change: "Thay đổi"
+        check_order: "Bạn không thể thay đổi trạng thái"
+        update_fail: "Thay đổi trạng thái không thành công"
+        update_success: "Thay đổi trạng thái thành công"
+      edit:
+        title: "Admin"
+        heading: "Thay đổi trạng thái"
+        order_status: "Trạng thái đơn hàng"
+        change: "Thay đồi"      

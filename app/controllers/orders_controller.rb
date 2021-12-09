@@ -29,12 +29,12 @@ class OrdersController < ApplicationController
       redirect_to order_path(@user)
     end
   rescue ActiveRecord::RecordInvalid
-    flash[:danger] = t ".err"
+    flash[:danger] = t "orders.index.err"
     redirect_to orders_path
   end
 
   def cancel
-    if @order.status == "pending"
+    if @order.pending?
       @order.update(status: "cancelled")
       flash[:success] = t "orders.list_order.cancel_success"
     else
@@ -88,7 +88,6 @@ class OrdersController < ApplicationController
     return if @user
 
     session[:forwarding_url] = carts_url
-
     redirect_to login_path
   end
 

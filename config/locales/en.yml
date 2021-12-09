@@ -159,6 +159,7 @@ en:
       back: "Shopping continue"
       not_found: "Item not found in cart"
       empty: "empty shopping cart"
+      please_login: "Please log in"
   orders:
     list_order:
       heading: "Orders"
@@ -311,3 +312,21 @@ en:
         price: "Price ($)"
         rating: "Rating"
         submit: "Update"
+    orders:
+      index:
+        title: "Admin"
+        heading: "Order management"
+        name: "Full name"
+        address: "Address"
+        phone: "Phone"
+        total_price: "Total amount"
+        status: "Status"
+        change: "Change"
+        check_order: "You can not change the status"
+        update_fail: "Status change failed"
+        update_success: "Status change successful"
+      edit:
+        title: "Admin"
+        heading: "Change status"
+        order_status: "Order Status"
+        change: "Change"

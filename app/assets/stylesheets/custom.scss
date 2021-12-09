@@ -161,6 +161,7 @@ section{
 .header-2 .icons .icon_header:hover{
   transform: scale(1.2);
 }
+
 .icons .account{
   position: absolute;
   top: 25px;
@@ -215,7 +216,6 @@ input {
 }
 
 // product details
-
 .preview {
   display: -webkit-box;
   display: -webkit-flex;
@@ -227,6 +227,7 @@ input {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+
 @media screen and (max-width: 996px) {
   .preview {
     margin-bottom: 20px; 
@@ -251,6 +252,7 @@ input {
   -webkit-animation-duration: .3s;
   animation-duration: .3s;
 }
+
 .tab-content img:hover{
   transform: scale(1.2);
   cursor: pointer;
@@ -258,17 +260,20 @@ input {
 
 .card {
   margin: 100px 0;
-  background: #eee;
+  background: $light_grey;
   padding: 4em;
   line-height: 1.5em;
-  box-shadow: 1px 5px 5px #ccc;
+  box-shadow: 1px 5px 5px $grey;
 }
+
 .card .details .price span{
   color: $red;
 }
+
 .details .product-title{
   margin-bottom: 16px;
 }
+
 @media screen and (min-width: 997px) {
   .wrapper {
     display: -webkit-box;
@@ -300,6 +305,7 @@ input {
     -webkit-transform: scale(3);
     transform: scale(3);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -313,6 +319,7 @@ input {
     -webkit-transform: scale(3);
     transform: scale(3);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -359,6 +366,7 @@ input {
   justify-content: right;
   gap: 10px;
 }
+
 .container_cart .cart_checkout button{
   margin: 0;
 }
@@ -405,17 +413,19 @@ input {
   align-items: center;
   margin-bottom: 20px;
 }
+
 .container_new_address .form_field label{
   flex-shrink: 0;
   min-width: 200px;
 }
+
 .container_new_address .form_field input{
   margin: 0;
   text-align: left !important;
 }
+
 .container_new_address .form_field input[type="checkbox"]{
-  width: auto;
-  
+  width: auto;  
 }
 
 //create order
@@ -426,75 +436,91 @@ input {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 1200px)
-{
+
+@media (min-width: 1200px){
   .container_create_order{
     max-width: 1140px;
   }
 }
+
 .container_create_order{
   label{
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
+
   h4{
     margin: 0 0 12px 0;
   }
+
   td{
     vertical-align: center !important;
   }
+
   td img{
     width: 50px;
     height: 50px;
   }
+  
   .btn{
     width: 100%;
   }
 }
+
 .container_show_order{
   .panel-heading{
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  
   .panel-heading .action{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
   }
+  
   .panel-heading .action .btn{
     padding: 4px 8px;
     margin: 0;
   }
+
   .list_items{
     list-style: none;
   }
+
   .item{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 0;
   }
+  
   .info{
     display: flex;
     gap: 10px;
   }
+  
   .info .image{
     width: 80px;
     height: 80px;
     border: 1px solid $grey;    
   }
+
   .info .image img{
     width: 100%;
   }
+
   .desc .product_name{
     margin-bottom: 12px;
   }
+
   .item:not(last-child){
     border-bottom: 1px solid $grey;
   }
+
   .price_total{
     display:flex;
     justify-content: end;
