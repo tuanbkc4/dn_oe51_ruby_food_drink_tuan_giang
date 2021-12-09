@@ -2,7 +2,8 @@ class Admin::CategoriesController < Admin::BaseController
   before_action :load_category, except: %i(index new create)
 
   def index
-    @pagy, @categories = pagy(Category.all, items: Settings.c_item.c_6)
+    @pagy, @categories = pagy(Category.all_category_sort_desc,
+                              items: Settings.c_item.c_6)
   end
 
   def new
@@ -32,14 +33,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def edit; end
 
-  def destroy
-    if @category.destroy
-      flash[:success] = t ".delete_success"
-    else
-      flash[:danger] = t ".delete_fail"
-    end
-    redirect_to admin_categories_path
-  end
+  def destroy; end
 
   private
 

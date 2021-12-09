@@ -8,4 +8,6 @@ class Category < ApplicationRecord
     uniqueness: true
 
   scope :root_categories, ->{where("parent_id IS NULL")}
+  scope :children_categories, ->{where("parent_id IS NOT NULL")}
+  scope :all_category_sort_desc, ->{order(created_at: :desc)}
 end

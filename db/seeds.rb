@@ -53,8 +53,7 @@ User.create!(user_name: "user",
     name: Faker::Food.dish,
     detail: Faker::Food.description,
     price: 20000,
-    image: "https://thumbs.dreamstime.com/b/fast-food-burger-18136724.jpg",
-    category_id: 1,
+    category_id: 3,
     rating: 1
   )
 end
@@ -64,8 +63,7 @@ end
     name: Faker::Coffee.blend_name,
     detail: Faker::Food.description,
     price: 20000,
-    image: "https://www.comunicaffe.com/wp-content/uploads/2016/07/coffee-cup.jpg",
-    category_id: 2,
+    category_id: 6,
     rating: 1
   )
 end

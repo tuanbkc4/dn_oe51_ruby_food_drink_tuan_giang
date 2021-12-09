@@ -127,8 +127,11 @@
   transition: all .2s linear;
 }
 
-.quick-action button{
-  font-size: 18px;
+.quick-action a{
+  font-size: 17px;
+  text-decoration: none;
+  color: $black;
+  align-self: center;
 }
 
 .quick-action .item_action:hover{
@@ -137,6 +140,7 @@
 
 .quick-action .icon_quick_action{
   position: relative;
+  margin-right: 4px;
 }
 
 .quick-action .plus{
@@ -205,6 +209,12 @@
   td{
     border: 1px solid $grey;
   }
+  
+  td img{
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+  }
 }
 
 .admin_manage_index table td{
@@ -227,7 +237,7 @@
   padding-bottom: 30px;
   .btn_add_cat{
     display: block;
-    padding: 4px 8px;
+    padding: 2px 20px;
     color: $black;
     margin-top: 12px;
     border-radius: 5px;
@@ -255,6 +265,42 @@
     line-height: 1.6;
     font-size: 16px;
     color: $black;
+  }
+
+  input:focus{
+    border: 1px solid $black;    
+  }
+  
+  select{
+    width: 200px;
+    display: block;
+  }
+}
+
+// add product
+.admin_manage_index .add_product{
+  padding-bottom: 30px;
+  .btn_add{
+    display: block;
+    padding: 8px 20px;
+    color: $black;
+    margin-top: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .form-label{
+    display: block;
+  }
+
+  form{
+    padding: 24px;
+    border: 1px solid $grey;
+  }
+
+  form:hover{
+    box-shadow: 1px 1px 5px $grey;
   }
 
   input:focus{

@@ -7,30 +7,30 @@
       </div>
       <div class="d-md-flex row m-0 quick-action-btns quick-action" role="group" aria-label="Quick action buttons">
         <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
-          <button type="button" class="btn px-0">
-          <i class="icon_quick_action">
-            <i class="fa fa-user mr-2" aria-hidden="true"></i>
-            <i class="fa fa-plus plus" aria-hidden="true"></i>
-          </i>
-          <%= t ".add_user" %>
-          </button>
+          <%= link_to new_admin_category_path, class: "btn px-0" do %>
+            <i class="icon_quick_action">
+              <i class="fa fa-list-alt mr-2" aria-hidden="true"></i>
+              <i class="fa fa-plus plus" aria-hidden="true"></i>
+            </i>
+            <%= t ".add_category" %>
+          <% end %>
         </div>
         <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
-          <button type="button" class="btn px-0">
+          <%= link_to new_admin_product_path, class: "btn px-0" do %>
             <i class="icon_quick_action">
               <i class="fa fa-cubes mr-2" aria-hidden="true"></i>
               <i class="fa fa-plus plus" aria-hidden="true"></i>
             </i>
             <%= t ".add_product" %>
-          </button>
+          <% end %>
         </div>
         <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
-          <button type="button" class="btn px-0">
+          <%= link_to new_admin_product_path, class: "btn px-0" do %>
             <i class="icon_quick_action">
               <i class="fa fa-list-alt mr-2" aria-hidden="true"></i>
             </i>
             <%= t ".manage_order" %>
-          </button>
+          <% end %>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
       <div class="card-body">
         <div class="d-sm-flex align-items-center mb-4 pb-2 lastest-product-header">
           <h4 class="card-title mb-sm-0"><%= t ".latest_product" %></h4>
-          <a href="#" class="text-dark ml-auto mb-3 mb-sm-0"><%= t ".view_roducts" %></a>
+          <%= link_to t(".view_roducts"), admin_products_path, class: "text-dark ml-auto mb-3 mb-sm-0" %>
         </div>
         <div class="table-responsive border rounded p-1 table-hover ">
           <table class="table">
@@ -112,7 +112,7 @@
               <% @lastest_product.each do |item| %>
                 <tr>
                   <td><%= item.name %></td>
-                  <td><%= item.price.to_i %></td>
+                  <td><%= number_to_currency(item.price) %></td>
                   <td><%= item.rating %></td>
                   <td><%= item.created_at.strftime("%d/%m/%Y") %></td>
                   <td><%= item.updated_at.strftime("%d/%m/%Y") %></td>

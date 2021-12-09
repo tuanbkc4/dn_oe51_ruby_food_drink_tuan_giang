@@ -3,6 +3,14 @@ vi:
     nav:
       prev: "Trước"
       next: "Tiếp"
+  number:
+    currency:
+      format:
+        unit: "VNĐ"
+        precision: 0
+        separator: ","
+        delimiter: "."
+        format: "%n %u"
   base_title: "Đồ ăn và thức uống"
   errors:
     contain: "Biểu mẫu chứa"
@@ -76,7 +84,6 @@ vi:
       price: "Giá: "
       add_to_cart: "thêm vào giỏ hàng"
       buy_now: "mua ngay"
-      unit_currency: "$"
       not_found: "Không tìm thấy sản phẩm"
   signup:
     title: "Đăng ký"
@@ -130,7 +137,7 @@ vi:
       home:
         title: "Admin"
         quick_actions: "Truy cập nhanh"
-        add_user: "Thêm người dùng"
+        add_category: "Thêm danh mục"
         add_product: "Thêm sản phẩm"
         manage_order: "Quản lý đơn hàng"
         report_summary: "Báo cáo tóm tắt"
@@ -181,3 +188,51 @@ vi:
         parent: "Danh mục gốc: (không bắt buộc)"
         choose: "Chọn rỗng"
         submit: "Sửa"
+    products:
+      index:
+        title: "Admin"
+        heading: "Quản lý sản phẩm"
+        add: "Thêm sản phẩm"
+        index: "STT"
+        name: "Tên sản phẩm"
+        category: "Danh mục"
+        image: "Hình ảnh"
+        price: "Giá"
+        rating: "Xếp hạng"
+        created_at: "Ngày tạo"
+        function: "chức năng"
+        edit: "Sửa"
+        delete: "Xóa"
+        confirm: "Bạn có chắc chắn muốn xóa dữ liệu không?"
+        find_fail: "Không tìm thấy sản phẩm"
+      create: 
+        create_success: "Thêm thành công"
+        create_fail: "Thêm không thành công"
+      new:
+        title: "Admin"
+        heading: "Thêm sản phẩm"
+        category: "Danh mục"
+        choose: "-- Chọn danh mục --"
+        name: "Tên sản phẩm"
+        detail: "Mô tả sản phẩm"
+        image: "Hình ảnh"
+        price: "Giá (VNĐ)"
+        rating: "Xếp hạng"
+        submit: "Thêm"
+      update:
+        update_success: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+      destroy:
+        delete_success: "Xóa sản phẩm thành công"
+        delete_fail: "Xóa sản phẩm không thành công"
+      edit:
+        title: "Admin"
+        heading: "Sửa sản phẩm"
+        category: "Danh mục"
+        choose: "-- Chọn danh mục --"
+        name: "Tên sản phẩm"
+        detail: "Mô tả sản phẩm"
+        image: "Hình ảnh"
+        price: "Giá (VNĐ)"
+        rating: "Xếp hạng"
+        submit: "Cập nhật"
