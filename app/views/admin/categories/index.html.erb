@@ -1,0 +1,43 @@
+<% provide :title, t(".title") %>
+<div class="admin_manage_index">
+  <div class="row">
+    <div class="col-md-12 heading">
+      <h3><%= t ".heading" %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= link_to t(".add"), new_admin_category_path, class: "btn btn-success btn-md btn_index" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><%= t ".index" %></th>
+            <th scope="col"><%= t ".name" %></th>
+            <th scope="col"><%= t ".parent" %></th>
+            <th scope="col"><%= t ".function" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categories.each_with_index do |category, index| %>
+            <tr>
+              <td><%= page_index params[:page], index %></td>              
+              <td><%= category.name %></td>
+              <td><%= get_name_root_category category.parent_id %></td>
+              <td class="col-2">
+                <%= link_to t(".edit"), edit_admin_category_path(id: category.id), class: "btn btn-warning btn-md btn_index btn_edit" %>
+                <%= link_to t(".delete"), admin_category_path(id: category.id), method: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger btn-md btn_index" %>
+              </td>
+            </tr>
+          <% end %>              
+        </tbody>
+      </table>
+      <div class="pagination">
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </div>     
+    </div>
+  </div>
+</div>

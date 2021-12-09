@@ -34,7 +34,7 @@
             <p class="font-weight-light text-muted mb-0">adminfooddrink@gmail.com</p>
           </div>
           <a href=""><%= t ".profile" %></a>
-          <a href=""><%= t ".signout" %></a>
+          <%= link_to t(".signout"), admin_logout_path, method: :delete %>
         </div>
       </li>
     </ul>
