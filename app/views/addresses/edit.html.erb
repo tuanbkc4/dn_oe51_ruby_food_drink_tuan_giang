@@ -1,0 +1,32 @@
+<% provide :title, t(".title") %>
+<div class="container container_new_address">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 toppad " > 
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t ".title" %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 ">
+            <%= form_for @address do |f| %>
+              <%= render "/shared/error_messages_address" %>
+              <div class="form_field">
+                <%= f.label :address, t(".address") %>
+                <%= f.text_field :address %>
+              </div>
+              <div class="form_field">
+                <%= f.label :phone, t(".phone") %>
+                <%= f.number_field :phone %>
+              </div>
+              <div class="form_field">
+                <%= f.label :is_default, t(".default") %>
+                <%= f.check_box :is_default %>
+              </div>            
+              <%= f.submit t(".add_address"), class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<% @orders.each do |order| %>
+  <div class="panel panel-info item_order">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= t ".heading" %></h3>
+      <div class="action">
+        <p class="panel-title"><%= t ".status" %><b><%= order.status %></b></p>
+        <%= link_to t(".cancel"), cancel_order_path(id: order.id), method: :put, data: {confirm: t(".confirm")}, class: "btn btn-success btn-md panel-title" %> 
+      </div>      
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 ">
+          <ul class="list_items">
+              <% order.order_details.each do |details| %>
+                <li class="item">
+                  <div class="info">
+                    <div class="image">
+                      <% if check_image_tag details.product %>
+                        <%= image_tag details.product.image  %>
+                      <% else %>
+                        <img src="/assets/product_default" alt="Product image">
+                      <% end %>
+                    </div>
+                    <div class="desc">
+                      <div class="product_name">
+                        <%= details.product.name %>
+                      </div>
+                      <div class="quantity">
+                        x <%= details.quantity %> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="price">
+                    <%= number_to_currency(details.product.price) %>
+                  </div>
+                </li>
+              <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12 ">
+          <div class="price_total">
+            <p><%= t ".total_price" %><b><%= number_to_currency(order.total_price) %></b></p>
+          </div>
+        </div>
+      </div>          
+    </div>
+  </div>
+<% end %>

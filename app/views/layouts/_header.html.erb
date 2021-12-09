@@ -12,18 +12,17 @@
       <%= link_to t(".home"), root_path %>
       <%= link_to t(".category"), "#" %>
       <%= link_to t(".product"), "#" %>
-      <%= link_to t(".contact"), "#" %>
     </nav>
     <% if logged_in? %>
       <ul class="icons">
         <li>
-          <a href="#" class="fas fa-shopping-cart icon_header"></a>
+          <%= link_to raw("<i class='fa fa-shopping-cart'></i>"), carts_path, class: "icon_header" %>
         </li>
         <li class="dropdown">
             <i href="#" class="dropdown-toggle fas fa-user-circle icon_header" data-toggle="dropdown"></i>
             <ul class="dropdown-menu account">
               <li>
-                <%= link_to t(".profile"), "#" %>
+                <%= link_to t(".profile"), user_path(current_user) %>
               </li>
               <li class="divider"></li>
               <li>

@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2022_01_02_103126) do
   create_table "orders", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "status"
-    t.bigint "address_id", null: false
+    t.bigint "address_id"
     t.integer "total_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

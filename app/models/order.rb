@@ -2,16 +2,20 @@ class Order < ApplicationRecord
   has_many :order_details, dependent: :destroy
   has_many :products, through: :order_details
   belongs_to :user
-  belongs_to :address
+  belongs_to :address, optional: true
   before_save :init_status
 
+  ORDER_ATTR = %w(address_id status).freeze
+
   enum status: {
-    pending: 0,
-    confirmed: 1,
-    shipping: 2,
-    completed: 3,
-    cancelled: 4
+    open: 0,
+    pending: 1,
+    confirmed: 2,
+    shipping: 3,
+    completed: 4,
+    cancelled: 5
   }
+  scope :all_order_desc, ->{Order.not_open.order(created_at: :desc)}
 
   private
 

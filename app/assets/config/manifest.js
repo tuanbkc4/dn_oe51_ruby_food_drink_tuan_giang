@@ -8,3 +8,5 @@
 //= link simple-line-icons.css
 //= link style.css
 //= link font-awesome.min.css
+//= link cart.js
+

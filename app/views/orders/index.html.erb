@@ -1,0 +1,55 @@
+<% provide :title, t(".title") %>
+<div class="container container_create_order">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 toppad " > 
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t ".order_form" %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 ">
+            <div class=" col-md-6 col-lg-6"> 
+              <div class="row">
+                <h4><%= t ".your_order" %></h4>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col"><%= t ".product" %></th>
+                      <th scope="col"><%= t ".quantity" %></th>
+                      <th scope="col"><%= t ".unit_price" %></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @order.order_details.each do |item| %>
+                      <tr>
+                        <td><%= image_tag item.product.image if item.product.image.attached? %> <%= item.product.name %></td>
+                        <td><%= item.quantity %></td>
+                        <td><%= number_to_currency(item.product.price) %></td>
+                      </tr>        
+                    <% end %>
+                    <tr>
+                      <td colspan="2"><%= t ".total_price" %></td>
+                      <td><%= number_to_currency(total_all_price) %></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>          
+            </div>
+            <div class=" col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1">
+                <label>
+                  <span><%= t ".fullname" %></span>
+                  <input type="text" name="fname" value="<%= @user.full_name %>" readonly>
+                </label>  
+                <%= form_for @order do |f| %>
+                  <%= f.hidden_field :status, value: "pending" %>
+                  <%= f.label :address_id, t(".Add_phone"), class: "form-label" %>
+                  <%= f.collection_select :address_id,  @user.addresses, :id, :address_initial, class: "form-control" %>     
+                  <%= f.submit t(".place_order") , class: "btn btn-sm btn-primary" %>             
+                <% end %>             
+            </div>            
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
