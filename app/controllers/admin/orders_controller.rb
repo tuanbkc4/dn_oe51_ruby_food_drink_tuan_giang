@@ -19,7 +19,7 @@ class Admin::OrdersController < Admin::BaseController
   end
 
   private
-  
+
   def status_params
     params.require(:order).permit(:status)
   end
@@ -34,15 +34,15 @@ class Admin::OrdersController < Admin::BaseController
 
   def check_order
     return unless @order.completed? || @order.cancelled?
-    
+
     flash[:danger] = t "admin.orders.index.check_order"
     redirect_to admin_orders_path
   end
-  
+
   def gap change_status, current_status
     (change_status.to_i - current_status).abs
   end
-  
+
   def check_update
     return true if status_params[:status].to_i <
                    Order.statuses[@order.status] ||

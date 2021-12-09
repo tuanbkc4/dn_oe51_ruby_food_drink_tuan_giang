@@ -1,5 +1,6 @@
 require "simplecov"
 require "simplecov-rcov"
+require "shoulda-matchers"
 class SimpleCov::Formatter::MergedFormatter
   def format(result)
      SimpleCov::Formatter::HTMLFormatter.new.format(result)
@@ -21,3 +22,4 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
+
