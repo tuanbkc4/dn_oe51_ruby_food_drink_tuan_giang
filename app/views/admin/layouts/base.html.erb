@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+
+    <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'simple-line-icons', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'font-awesome.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'jquery-3.2.1.slim.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'popper.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap.min', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+
+    <!-- custom css file link -->
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <%= render "admin/layouts/header" %>
+      <div class="container-fluid page-body-wrapper">
+        <%= render "admin/layouts/sidebar" %>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <%= render "admin/layouts/flash" %>          
+            <%= yield %>
+          </div>
+          <%= render "admin/layouts/footer" %>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'vendor.bundle.base', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
