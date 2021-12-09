@@ -1,5 +1,12 @@
 vi:
+  pagy:
+    nav:
+      prev: "Trước"
+      next: "Tiếp"
   base_title: "Đồ ăn và thức uống"
+  errors:
+    contain: "Biểu mẫu chứa"
+    err: "lỗi"
   layouts:
     header:
       logo: " Food and Drink"
@@ -136,3 +143,39 @@ vi:
         rating: "Đánh giá"
         created_at: "Ngày tạo"
         updated_at: "Ngày cập nhật"
+    categories:
+      index:
+        title: "Admin"
+        heading: "Quản lý danh mục"
+        add: "Thêm danh mục"
+        index: "STT"
+        name: "Tên danh mục"
+        parent: "Danh mục gốc"
+        function: "chức năng"
+        edit: "Sửa"
+        delete: "Xóa"
+        confirm: "Bạn có chắc chắn muốn xóa dữ liệu không?"
+        find_fail: "Không tìm thấy danh mục"
+      create: 
+        create_success: "Thêm thành công"
+        create_fail: "Thêm không thành công"
+      new:
+        title: "Admin"
+        heading: "Thêm danh mục"
+        name: "Tên danh mục"
+        parent: "Danh mục gốc: (không bắt buộc)"
+        choose: "-- Chọn danh mục gốc --"
+        add: "Thêm"
+      update:
+        update_success: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+      destroy:
+        delete_success: "Xóa danh mục thành công"
+        delete_fail: "Xóa danh mục không thành công"
+      edit:
+        title: "Admin"
+        heading: "Sửa danh mục"
+        name: "Tên danh mục"
+        parent: "Danh mục gốc: (không bắt buộc)"
+        choose: "Chọn rỗng"
+        submit: "Sửa"

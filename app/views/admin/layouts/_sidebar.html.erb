@@ -16,47 +16,47 @@
       <span class="nav-link"><%= t ".title_dashboard" %></span>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".home" %></span>
         <i class="fa fa-home" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item nav-category"><span class="nav-link"><%= t ".management_page" %></span></li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_categories_path, class: "nav-link" do %>
         <span class="menu-title"><%= t ".category" %></span>
         <i class="fa fa-folder-open" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".product" %></span>
         <i class="fa fa-cubes" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".user" %></span>
         <i class="fa fa-users" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".order" %></span>
         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".order_detail" %></span>
         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <%= link_to admin_root_url, class: "nav-link" do %>
         <span class="menu-title"><%= t ".address" %></span>
         <i class="fa fa-address-card" aria-hidden="true"></i>
-      </a>
+      <% end %>
     </li>
   </ul>
 </nav>
