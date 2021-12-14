@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_12_11_045615) do
 
-  create_table "addresses", charset: "utf8mb4", force: :cascade do |t|
+  create_table "addresses", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "address"
     t.boolean "is_default"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2021_12_11_045615) do
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
-  create_table "categories", charset: "utf8mb4", force: :cascade do |t|
+  create_table "categories", charset: "utf8", force: :cascade do |t|
     t.string "name"
-    t.integer "parent"
+    t.integer "parent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "order_details", charset: "utf8mb4", force: :cascade do |t|
+  create_table "order_details", charset: "utf8", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.integer "total_price"
     t.bigint "order_id", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_12_11_045615) do
     t.index ["product_id"], name: "index_order_details_on_product_id"
   end
 
-  create_table "orders", charset: "utf8mb4", force: :cascade do |t|
+  create_table "orders", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "status"
     t.bigint "address_id", null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_12_11_045615) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
-  create_table "products", charset: "utf8mb4", force: :cascade do |t|
+  create_table "products", charset: "utf8", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.string "name"
     t.string "detail"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_12_11_045615) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "userName"
     t.string "fullName"
     t.string "email"
