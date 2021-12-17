@@ -1,4 +1,4 @@
-<% provide :title, t("app.views.home.title") %>
+<% provide :title, t(".title") %>
 
 <!-- home section starts  -->
 
@@ -8,9 +8,9 @@
   </div>
 
   <div class="content">
-      <span><%= t("app.views.home.span") %></span>
-      <h3><%= t("app.views.home.content") %></h3>
-      <a href="#" class="btn"><%= t("app.views.home.started") %></a>
+      <span><%= t(".span") %></span>
+      <h3><%= t(".content") %></h3>
+      <a href="#" class="btn"><%= t(".started") %></a>
   </div>
 </section>
 
@@ -20,18 +20,18 @@
   <div class="banner">
       <img src="assets/banner-1.jpg" alt="">
       <div class="content">
-        <h3><%= t("app.views.home.offer") %></h3>
-        <p><%= t("app.views.home.upto45") %></p>
-        <a href="#" class="btn"><%= t("app.views.home.check_out") %></a>
+        <h3><%= t(".offer") %></h3>
+        <p><%= t(".upto45") %></p>
+        <a href="#" class="btn"><%= t(".check_out") %></a>
       </div>
   </div>
 
   <div class="banner">
       <img src="assets/banner-2.jpg" alt="">
       <div class="content">
-        <h3><%= t("app.views.home.limited") %></h3>
-        <p><%= t("app.views.home.upto50") %></p>
-        <a href="#" class="btn"><%= t("app.views.home.check_out") %></a>
+        <h3><%= t(".limited") %></h3>
+        <p><%= t(".upto50") %></p>
+        <a href="#" class="btn"><%= t(".check_out") %></a>
       </div>
   </div>
 </section>
@@ -39,31 +39,27 @@
 <!-- category section starts  -->
 
 <section class="category" id="category">
-  <h1 class="heading"><%= t("app.views.home.shop") %> <span><%= t("app.views.home.category") %></span></h1>
+  <h1 class="heading"><%= t(".shop") %> <span><%= t(".categories") %></span></h1>
   <div class="box-container">
     <div class="box">
-      <h3><%= t("app.views.home.vegitables") %></h3>
-      <p><%= t("app.views.home.upto50") %></p>
+      <h3><%= t(".vegitables") %></h3>
       <img src="assets/category-1.png" alt="">
-      <a href="#" class="btn"><%= t("app.views.home.shop_now") %></a>
+      <a href="#" class="btn"><%= t(".shop_now") %></a>
     </div>
     <div class="box">
-      <h3><%= t("app.views.home.juice") %></h3>
-      <p><%= t("app.views.home.upto40") %></p>
+      <h3><%= t(".juice") %></h3>
       <img src="assets/category-2.png" alt="">
-      <a href="#" class="btn"><%= t("app.views.home.shop_now") %></a>
+      <a href="#" class="btn"><%= t(".shop_now") %></a>
     </div>
     <div class="box">
-      <h3><%= t("app.views.home.meat") %></h3>
-      <p><%= t("app.views.home.upto35") %></p>
+      <h3><%= t(".meat") %></h3>
       <img src="assets/category-3.png" alt="">
-      <a href="#" class="btn"><%= t("app.views.home.shop_now") %></a>
+      <a href="#" class="btn"><%= t(".shop_now") %></a>
     </div>
     <div class="box">
-      <h3><%= t("app.views.home.fruite") %></h3>
-      <p><%= t("app.views.home.upto12") %></p>
+      <h3><%= t(".fruite") %></h3>
       <img src="assets/category-4.png" alt="">
-      <a href="#" class="btn"><%= t("app.views.home.shop_now") %></a>
+      <a href="#" class="btn"><%= t(".shop_now") %></a>
     </div>
   </div>
 </section>
@@ -71,47 +67,11 @@
 <!-- product section starts  -->
 
 <section class="product" id="product">
-  <h1 class="heading"><%= t("app.views.home.latest") %> <span><%= t("app.views.home.products") %></span></h1>
-  <div class="box-container">
-    <div class="box">
-      <span class="discount"><%= t("app.views.home.discount33") %></span>
-      <div class="icons">
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-share"></a>
-        <a href="#" class="fas fa-eye"></a>
-      </div>
-
-      <img src="assets/product-1.png" alt="">
-      <h3><%= t("app.views.home.banana") %></h3>
-
-      <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star-half-alt"></i>
-      </div>
-
-      <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %>  </span> </div>
-        <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
-          <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
-        </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount45") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-
+  <h1 class="heading"><%= t(".latest") %> <span><%= t(".product") %></span></h1>
+  <ul class="box-container">
+    <li class="box">
         <img src="assets/product-2.png" alt="">
-        <h3><%= t("app.views.home.tomato") %></h3>
-
+        <h3><%= t(".tomato") %></h3>
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -119,49 +79,17 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star-half-alt"></i>
         </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
+        <div class="price"> <%= t(".money10") %></div>
         <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
+          <span><%= t(".quantity") %> </span>
           <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
+          <a href="#" class="fas fa-shopping-cart icon_cart"></a>          
         </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount52") %></span>
-        <div class="icons">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-share"></a>
-            <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-3.png" alt="">
-        <h3><%= t("app.views.home.orange") %></h3>
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
-        <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
-          <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
-        </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount13") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-4.png" alt="">
-        <h3><%= t("app.views.home.mild") %></h3>
+        <a href="#" class="btn"><%= t(".see_details") %></a>
+      </li>
+      <li class="box">
+        <img src="assets/product-2.png" alt="">
+        <h3><%= t(".tomato") %></h3>
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -169,24 +97,17 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star-half-alt"></i>
         </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
+        <div class="price"> <%= t(".money10") %></div>
         <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
+          <span><%= t(".quantity") %> </span>
           <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
+          <a href="#" class="fas fa-shopping-cart icon_cart"></a>          
         </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount20") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-5.png" alt="">
-        <h3><%= t("app.views.home.grapes") %></h3>
+        <a href="#" class="btn"><%= t(".see_details") %></a>
+      </li>
+      <li class="box">
+        <img src="assets/product-2.png" alt="">
+        <h3><%= t(".tomato") %></h3>
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -194,27 +115,17 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star-half-alt"></i>
         </div>
-        <div class="price">
-          <%= t("app.views.home.money10") %>
-          <span> <%= t("app.views.home.money13") %> </span>
-        </div>
+        <div class="price"> <%= t(".money10") %></div>
         <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
+          <span><%= t(".quantity") %> </span>
           <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
+          <a href="#" class="fas fa-shopping-cart icon_cart"></a>          
         </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount29") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-6.png" alt="">
-        <h3><%= t("app.views.home.almonts") %></h3>
+        <a href="#" class="btn"><%= t(".see_details") %></a>
+      </li>
+      <li class="box">
+        <img src="assets/product-2.png" alt="">
+        <h3><%= t(".tomato") %></h3>
         <div class="stars">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -222,165 +133,32 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star-half-alt"></i>
         </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
+        <div class="price"> <%= t(".money10") %></div>
         <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
+          <span><%= t(".quantity") %> </span>
           <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
+          <a href="#" class="fas fa-shopping-cart icon_cart"></a>          
         </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount55") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-7.png" alt="">
-        <h3><%= t("app.views.home.apple") %></h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
-        <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
-          <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
-        </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount30") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-8.png" alt="">
-        <h3><%= t("app.views.home.butter") %></h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
-        <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
-          <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
-        </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-
-      <div class="box">
-        <span class="discount"><%= t("app.views.home.discount40") %></span>
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-          <a href="#" class="fas fa-share"></a>
-          <a href="#" class="fas fa-eye"></a>
-        </div>
-        <img src="assets/product-9.png" alt="">
-        <h3><%= t("app.views.home.carrot") %></h3>
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-        <div class="price"> <%= t("app.views.home.money10") %> <span> <%= t("app.views.home.money13") %> </span> </div>
-        <div class="quantity">
-          <span><%= t("app.views.home.quantity") %> </span>
-          <input type="number" min="1" max="1000" value="1">
-          <span> <%= t("app.views.home.kg") %> </span>
-        </div>
-        <a href="#" class="btn"><%= t("app.views.home.add") %></a>
-      </div>
-    </div>
+        <a href="#" class="btn"><%= t(".see_details") %></a>
+      </li>      
+    </ul>
   </div>
 </section>
 
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
-  <h1 class="heading"> <span><%= t("app.views.home.contact") %></span> <%= t("app.views.home.us") %> </h1>
-  <form action="">
+  <h1 class="heading"> <span><%= t(".contact") %></span> <%= t(".us") %> </h1>
+  <form action="#">
     <div class="inputBox">
-      <input type="text" placeholder="name">
-      <input type="email" placeholder="email">
+      <input type="text" placeholder="<%= t(".name") %>">
+      <input type="email" placeholder="<%= t(".email") %>">
     </div>
     <div class="inputBox">
-      <input type="number" placeholder="number">
-      <input type="text" placeholder="subject">
+      <input type="number" placeholder="<%= t(".number") %>">
+      <input type="text" placeholder="<%= t(".subject") %>">
     </div>
-    <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-    <input type="submit" value="send message" class="btn">
+    <textarea placeholder="<%= t(".message") %>" name="" id="" cols="30" rows="10"></textarea>
+    <input type="submit" value="<%= t(".send_message") %>" class="btn">
   </form>
-</section>
-
-<!-- newsletter section starts  -->
-
-<section class="newsletter">
-  <h3><%= t("app.views.home.content_subscribe") %></h3>
-  <form action="">
-    <input class="box" type="email" placeholder="enter your email">
-    <input type="submit" value="subscribe" class="btn">
-  </form>
-</section>
-
-<!-- footer section starts  -->
-
-<section class="footer">
-  <div class="box-container">
-    <div class="box">
-      <a href="#" class="logo"><i class="fas fa-shopping-basket"></i><%= t("app.views.home.logo") %></a>
-      <p><%= t("app.views.home.content_footer") %></p>
-      <div class="share">
-        <a href="#" class="btn fab fa-facebook-f"></a>
-        <a href="#" class="btn fab fa-twitter"></a>
-        <a href="#" class="btn fab fa-instagram"></a>
-        <a href="#" class="btn fab fa-linkedin"></a>
-      </div>
-    </div>
-    
-    <div class="box">
-      <h3><%= t("app.views.home.location") %></h3>
-      <div class="links">
-        <a href="#"><%= t("app.views.home.saigon") %></a>
-        <a href="#"><%= t("app.views.home.hanoi") %></a>
-        <a href="#"><%= t("app.views.home.danang") %></a>
-        <a href="#"><%= t("app.views.home.haiphong") %></a>
-        <a href="#"><%= t("app.views.home.nhatrang") %></a>
-      </div>
-    </div>
-
-    <div class="box">
-      <h3><%= t("app.views.home.quick") %></h3>
-      <div class="links">
-        <a href="#"><%= t("app.views.home.quick_home") %></a>
-        <a href="#"><%= t("app.views.home.quick_category") %></a>
-        <a href="#"><%= t("app.views.home.quick_product") %></a>
-        <a href="#"><%= t("app.views.home.quick_contact") %></a>
-      </div>
-    </div>
-
-    <div class="box">
-      <h3><%= t("app.views.home.download") %></h3>
-      <div class="links">
-        <a href="#"><%= t("app.views.home.google") %></a>
-        <a href="#"><%= t("app.views.home.window") %></a>
-        <a href="#"><%= t("app.views.home.app_store") %></a>
-      </div>
-    </div>
-  </div>
-  <h1 class="credit"> <%= t("app.views.home.created") %> <span> <%= t("app.views.home.designer") %> </span> <%= t("app.views.home.reserved") %> </h1>
 </section>
