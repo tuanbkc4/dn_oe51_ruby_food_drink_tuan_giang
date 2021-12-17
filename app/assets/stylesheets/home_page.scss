@@ -110,6 +110,12 @@
   margin-left: -25px;
 }
 
+.product .paginate{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid $grey;
+}
+
 .product .box-container .box{
   text-align: center;
   padding:2rem;

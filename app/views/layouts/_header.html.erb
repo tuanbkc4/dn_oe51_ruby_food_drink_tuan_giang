@@ -9,10 +9,10 @@
 
   <div class="header-2">
     <nav class="navbar">
-      <a href="#home"><%= t(".home") %></a>
-      <a href="#category"><%= t(".category") %></a>
-      <a href="#product"><%= t(".product") %></a>
-      <a href="#contact"><%= t(".contact") %></a>
+      <%= link_to t(".home"), root_path %>
+      <%= link_to t(".category"), "#" %>
+      <%= link_to t(".product"), "#" %>
+      <%= link_to t(".contact"), "#" %>
     </nav>
     <% if logged_in? %>
       <ul class="icons">

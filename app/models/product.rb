@@ -10,10 +10,9 @@ class Product < ApplicationRecord
   validates :price, presence: true,
     numericality: {only_decimal: true}
 
-  validates :category, presence: true,
-    numericality: {only_integer: true}
-
   validates :detail, presence: true
+
+  scope :latest_product, ->{order(created_at: :desc).limit(Settings.c_item.c_6)}
 
   private
 

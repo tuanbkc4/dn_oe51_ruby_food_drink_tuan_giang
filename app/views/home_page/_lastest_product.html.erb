@@ -1,0 +1,25 @@
+<section class="product" id="product">
+  <h1 class="heading"><%= t(".latest") %> <span><%= t(".product") %></span></h1>
+  <ul class="box-container">
+    <% @products.each do |product| %>
+      <li class="box">
+          <%= image_tag(product.image) %>
+          <h3><%= product.name %></h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="price"> <%= product.price %></div>
+          <div class="quantity">
+            <span><%= t(".quantity") %> </span>
+            <input type="number" min="1" max="1000" value="1">
+            <a href="#" class="fas fa-shopping-cart icon_cart"></a>          
+          </div>
+          <%= link_to t(".see_details"), product_path(id: product.id), class: "btn" %>
+      </li>
+    <% end %>
+  </ul>
+</section>

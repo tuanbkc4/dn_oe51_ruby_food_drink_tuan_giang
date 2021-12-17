@@ -63,7 +63,14 @@ vi:
       number: "số điện thoại"
       subject: "chủ đề"
       message: "tin nhắn"
-      send_message: "Gửi tin nhắn"        
+      send_message: "Gửi tin nhắn"
+  products:
+    show:
+      price: "Giá: "
+      add_to_cart: "thêm vào giỏ hàng"
+      buy_now: "mua ngay"
+      unit_currency: "$"
+      not_found: "Không tìm thấy sản phẩm"
   signup:
     title: "Đăng ký"
     username: "Username"

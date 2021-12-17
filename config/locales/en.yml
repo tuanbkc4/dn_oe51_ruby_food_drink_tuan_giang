@@ -63,7 +63,14 @@ en:
       number: "number"
       subject: "subject"
       message: "message"
-      send_message: "Send message"              
+      send_message: "Send message"
+  products:
+    show:
+      price: "Price: "
+      add_to_cart: "Add to cart"
+      buy_now: "Buy now"
+      unit_currency: "$"
+      not_found: "No products found"
   signup:
     title: "Sign up"
     username: "Username"

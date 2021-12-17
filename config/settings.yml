@@ -6,3 +6,6 @@ length:
 
 regex:
   email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+
+c_item:
+  c_6: 6
