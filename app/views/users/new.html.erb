@@ -1,0 +1,25 @@
+<% provide :title, t("signup.title") %>
+<div class="container container_signup">
+  <div class="row">
+    <h1 class="signup"><%= t("signup.title") %></h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <%= form_for(@user, url: signup_path) do |f| %>
+        <%= render "shared/error_messages" %>
+        <%= f.label :user_name, t("signup.username") %>
+        <%= f.text_field :user_name %>
+        <%= f.label :full_name, t("signup.fullname") %>
+        <%= f.text_field :full_name %>
+        <%= f.label :email, t("signup.email") %>
+        <%= f.email_field :email %>
+        <%= f.label :password, t("signup.password") %>
+        <%= f.password_field :password %>
+        <%= f.label :password_confirmation, t("signup.confirm_password") %>
+        <%= f.password_field :password_confirmation %>
+        <%= f.submit t("signup.submit"), class: "btn btn-primary btn_register" %>        
+      <% end %>
+      <p><%= t "signup.have_account" %><%= link_to t("signup.login"), login_path %></p>
+    </div>
+  </div>
+</div>

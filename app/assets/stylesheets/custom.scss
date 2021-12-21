@@ -1,23 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "color";
-
-:root{
-  --green:#27ae60;
-  --black:#2c2c54;
-}
 
 *{
   font-family: "Nunito", sans-serif;
-  margin:0; padding:0;
+  margin:0;
+  padding:0;
   box-sizing: border-box;
-  outline: none; border:none;
+  outline: none;
+  border:none;
   text-decoration: none;
-  text-transform: capitalize;
-  transition: all .2s linear;
+  transition: all .1s linear;
 }
 
 *::selection{
-  background:var(--green);
+  background: $green;
   color: $white;
 }
 
@@ -35,7 +33,7 @@ section{
 .btn{
   display: inline-block;
   margin-top: 1rem;
-  background:var(--green);
+  background: $green;
   color: $white;
   padding:.8rem 3rem;
   font-size: 1.7rem;
@@ -44,12 +42,13 @@ section{
 }
 
 .btn:hover{
-  background:var(--black);
+  background: $black;
+  color: $white;
 }
 
 .heading{
   text-align: center;
-  color:var(--black);
+  color: $black;
   text-transform: uppercase;
   padding:1rem;
   font-size: 3.5rem;
@@ -57,7 +56,7 @@ section{
 }
 
 .heading span{
-  color:var(--green);
+  color: $green;
   text-transform: uppercase;
 }
 
@@ -70,14 +69,14 @@ section{
 }
 
 .logo{
-  color:var(--black);
+  color: $black;
   font-weight: bolder;
   font-size: 3rem;
 }
 
 .logo i{
   padding-right: .5rem;
-  color:var(--green);
+  color: $green;
 }
 
 .header-1 .search-box-container{
@@ -88,26 +87,31 @@ section{
 .header-1 .search-box-container #search-box{
   height: 100%;
   width:100%;
-  padding:1rem;
-  font-size: 2rem;
+  padding:16px;
+  font-size: 15px;
   color: $header;
   border:.1rem solid $product_box1;
-  text-transform: none;
+  border-radius: 5px 0 0 5px;
 }
 
 .header-1 .search-box-container label{
-  height: 100%;
-  width:8rem;
-  font-size: 2.5rem;
+  height: 34px;
+  width: 60px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
   line-height: 5rem;
   color: $white;
-  background:var(--green);
+  background: $green;
   text-align: center;
   cursor: pointer;
 }
 
+.header-1 .search-box-container label .search{
+  margin-bottom: 4px;
+}
+
 .header-1 .search-box-container label:hover{
-  background:var(--black);
+  background: $black;
 }
 
 .header-2{
@@ -115,45 +119,97 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:2rem 9%;
-  box-shadow: 0 .5rem 1rem $product_box;
-  position: relative;
+  box-shadow: 0 5px 10px $product_box;
 }
 
-.header-2.active{
-  position: fixed;
-  top:0; left: 0; right:0;
-  z-index: 10000;
+.header-2 .navbar{
+  margin-bottom: 0;
+  margin-right: 12px;
 }
 
 .header-2 .navbar a{
-  padding:.5rem 1.5rem;
+  padding: 0 5px;
   font-size: 2rem;
-  border-radius: .5rem;
-  color:var(--black);
+  color: $black;
+  line-height: 50px;
+  display: inline-block;
 }
 
 .header-2 .navbar a:hover{
-  background:var(--green);
+  background: $green;
   color: $white;
+  text-decoration: none;
 }
 
-.header-2 .icons a{
-  font-size: 2.5rem;
-  color:var(--black);
-  padding-left: 1rem;
+.header-2 .icons{
+  margin-right: 20px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  position: relative;  
 }
 
-.header-2 .icons a:hover{
-  color:var(--green);
-}
-
-#menu-bar{
-  font-size: 3rem;
-  border-radius: .5rem;
-  border:.1rem solid var(--black);
-  padding:.8rem 1.5rem;
-  color:var(--black);
+.header-2 .icons .icon_header{
+  font-size: 18px;
   cursor: pointer;
-  display: none;
+  
+}
+
+.header-2 .icons .icon_header:hover{
+  transform: scale(1.2);
+}
+.icons .account{
+  position: absolute;
+  top: 25px;
+  left: -130px;
+}
+
+// signup and login
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid $grey;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: $red;
+  ul {
+  color: $red;
+  margin: 0 0 30px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $red;
+  }
+}
+
+.container_signup,
+.container_login{
+  margin-top: 24px;
+}
+
+.signup,
+.login{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn_register,
+.btn_login{
+  display: block;
+  width: 100%;
+  margin: 8px auto;
 }
