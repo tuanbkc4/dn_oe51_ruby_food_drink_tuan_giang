@@ -1,0 +1,45 @@
+<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+  <div class="navbar-brand-wrapper ">
+    <%= link_to t(".logo"), "#", class: "logo" %>
+  </div>
+  <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+    <h5 class="mb-0 font-weight-medium d-none d-lg-flex"><%= t ".welcome" %></h5>
+    <ul class="navbar-nav navbar-nav-right ml-auto">
+      <form class="search-form d-none d-md-block" action="#">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+      </form>
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="nav-item language">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <span class="profile-text font-weight-normal"><%= t ".language" %></span>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+        <div class="item-language">
+          <%= link_to t(".english"), locale: :en %>         
+          <%= link_to t(".vietnamese"), locale: :vi %>          
+        </div>
+      </li>
+      <li class="nav-item acount_admin ">     
+        <img class="img-xs rounded-circle ml-2" src="/assets/admin/face1.jpg" alt="Profile image">
+        <span class="font-weight-normal"> Admin </span>
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+        <div class="item_acount_admin">
+          <div class="text-center border-bottom pb-3">
+            <img class="img-md rounded-circle" src="/assets/admin/face1.jpg" alt="Profile image">
+            <p class="mb-1 mt-3">Admin</p>
+            <p class="font-weight-light text-muted mb-0">adminfooddrink@gmail.com</p>
+          </div>
+          <a href=""><%= t ".profile" %></a>
+          <a href=""><%= t ".signout" %></a>
+        </div>
+      </li>
+    </ul>
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+      <span class="icon-menu"></span>
+    </button>
+  </div>
+</nav>

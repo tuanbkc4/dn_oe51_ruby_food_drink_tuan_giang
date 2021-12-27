@@ -1,0 +1,127 @@
+<% provide :title, t(".title") %>
+<div class="row quick-action-toolbar">
+  <div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-header d-block d-md-flex">
+        <h5 class="mb-0"><%= t ".quick_actions" %></h5>
+      </div>
+      <div class="d-md-flex row m-0 quick-action-btns quick-action" role="group" aria-label="Quick action buttons">
+        <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
+          <button type="button" class="btn px-0">
+          <i class="icon_quick_action">
+            <i class="fa fa-user mr-2" aria-hidden="true"></i>
+            <i class="fa fa-plus plus" aria-hidden="true"></i>
+          </i>
+          <%= t ".add_user" %>
+          </button>
+        </div>
+        <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
+          <button type="button" class="btn px-0">
+            <i class="icon_quick_action">
+              <i class="fa fa-cubes mr-2" aria-hidden="true"></i>
+              <i class="fa fa-plus plus" aria-hidden="true"></i>
+            </i>
+            <%= t ".add_product" %>
+          </button>
+        </div>
+        <div class="col-sm-6 col-md-4 p-3 text-center btn-wrapper item_action">
+          <button type="button" class="btn px-0">
+            <i class="icon_quick_action">
+              <i class="fa fa-list-alt mr-2" aria-hidden="true"></i>
+            </i>
+            <%= t ".manage_order" %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="row col-md-12">
+            <div class="d-sm-flex align-items-baseline report-summary-header">
+              <h5 class="font-weight-semibold"><%= t ".report_summary" %></h5>
+            </div>
+          </div>
+          <div class="row report-inner-cards-wrapper">
+            <div class=" col-md-6 col-xl report-inner-card">
+              <div class="inner-card-text">
+                <span class="report-title"><%= t ".category" %></span>
+                <h4><%= @count_category %></h4>
+              </div>
+              <div class="inner-card-icon bg-success">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl report-inner-card">
+              <div class="inner-card-text">
+                <span class="report-title"><%= t ".product" %></span>
+                <h4><%= @count_product %></h4>
+              </div>
+              <div class="inner-card-icon bg-danger">
+                <i class="fa fa-cubes mr-2" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl report-inner-card">
+              <div class="inner-card-text">
+                <span class="report-title"><%= t ".user" %></span>
+                <h4><%= @count_user %></h4>
+              </div>
+              <div class="inner-card-icon bg-warning">
+                <i class="fa fa-user mr-2" aria-hidden="true"></i> 
+              </div>
+            </div>
+            <div class="col-md-6 col-xl report-inner-card">
+              <div class="inner-card-text">
+                <span class="report-title"><%= t ".order" %></span>
+                <h4><%= @count_order %></h4>
+              </div>
+              <div class="inner-card-icon bg-primary">
+                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-sm-flex align-items-center mb-4 pb-2 lastest-product-header">
+          <h4 class="card-title mb-sm-0"><%= t ".latest_product" %></h4>
+          <a href="#" class="text-dark ml-auto mb-3 mb-sm-0"><%= t ".view_roducts" %></a>
+        </div>
+        <div class="table-responsive border rounded p-1 table-hover ">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="font-weight-bold"><%= t ".name" %></th>
+                <th class="font-weight-bold"><%= t ".price" %></th>
+                <th class="font-weight-bold"><%= t ".rating" %></th>
+                <th class="font-weight-bold"><%= t ".created_at" %></th>
+                <th class="font-weight-bold"><%= t ".updated_at" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @lastest_product.each do |item| %>
+                <tr>
+                  <td><%= item.name %></td>
+                  <td><%= item.price.to_i %></td>
+                  <td><%= item.rating %></td>
+                  <td><%= item.created_at.strftime("%d/%m/%Y") %></td>
+                  <td><%= item.updated_at.strftime("%d/%m/%Y") %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

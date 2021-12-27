@@ -1,0 +1,177 @@
+@import "color";
+
+// header
+.logo{
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70px;  
+  transition: 0.2s;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.search-form{
+  position: relative;
+}
+
+.search-form .search-icon{
+  position: absolute;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-form input:focus{
+  width: 400px !important;
+}
+
+.language{
+  cursor: pointer;
+  position: relative;
+  margin-left: 5px;
+  line-height: 50px;
+}
+
+.language .item-language{
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  display: none;
+  background-color: $white;
+  box-shadow: 0px 0px 5px $black;
+  border-radius: 5px;
+  padding: 4px 2px;
+}
+
+.language .item-language a{
+  text-decoration: none;
+  padding: 4px 16px;
+  color: $black;
+  display: block;
+  line-height: 20px;
+}
+
+.language .item-language a:hover{
+  background-color: $grey;
+}
+
+.language .item-language a:first-child{
+  border-bottom: 1px solid $grey;
+}
+
+.language:hover .item-language{
+  display: block;
+}
+
+.acount_admin{  
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  margin-left: 5px;
+  line-height: 50px;
+  margin-left: 30px;
+}
+
+.acount_admin .item_acount_admin{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background-color: $white;
+  box-shadow: 0px 0px 5px $black;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.acount_admin .item_acount_admin a{
+  text-decoration: none;
+  padding: 8px 16px;
+  color: $black;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+}
+
+.acount_admin .item_acount_admin a:hover{
+  background-color: $grey;
+}
+.acount_admin:hover .item_acount_admin{
+  display: block;
+}
+
+//side bar
+.profile-image .active_admin{
+  right: 4px !important;
+  top: 31px !important;
+}
+
+.sidebar .nav-item .nav-link{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar .nav-profile .profile{
+  display: flex;
+  justify-content: start;
+}
+
+.quick-action .item_action{
+  transition: all .2s linear;
+}
+
+.quick-action button{
+  font-size: 18px;
+}
+
+.quick-action .item_action:hover{
+  background-color: $grey;
+}
+
+.quick-action .icon_quick_action{
+  position: relative;
+}
+
+.quick-action .plus{
+  position: absolute;
+  font-size: 12px;
+  color: $green;
+  bottom: 8px;
+  right: 1px;
+  font-weight: 900;
+}
+
+.report-summary-header{
+  width: 100%;
+  border-bottom: 1px solid $grey;
+}
+
+.report-inner-cards-wrapper{
+  width: 100%;
+  .inner-card-text h4{
+    text-align: center;
+  }
+}
+
+.card_lastest_product{
+  width: 100%;
+}
+
+.lastest-product-header{
+  border-bottom: 1px solid $grey;
+}
+
+.footer{
+  background-color: rgba(68, 68, 70, 0.842);
+  padding: 0 24px;
+}
+
+.footer span{
+  color: $white;
+  line-height: 42px;
+}
