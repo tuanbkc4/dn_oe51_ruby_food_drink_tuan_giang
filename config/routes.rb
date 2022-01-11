@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     
     namespace :admin do
       root "static_page#home"
-      get "/", to: "static_page#home"
+      get "/home", to: "static_page#home"
+      delete "/logout", to: "static_page#destroy"
+      resources :categories, except: %i(show)
     end
   end
 end
