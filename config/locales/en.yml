@@ -3,6 +3,14 @@ en:
     nav:
       prev: "Prev"
       next: "Next"
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 0
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
   base_title: "Food and drink"
   errors:
     contain: "The form contains"
@@ -76,7 +84,6 @@ en:
       price: "Price: "
       add_to_cart: "Add to cart"
       buy_now: "Buy now"
-      unit_currency: "$"
       not_found: "No products found"
   signup:
     title: "Sign up"
@@ -130,7 +137,7 @@ en:
       home:
         title: "Admin"
         quick_actions: "Quick Actions"
-        add_user: "Add User"
+        add_category: "Add category"
         add_product: "Add product"
         manage_order: "Manage order"
         report_summary: "Report Summary"
@@ -181,3 +188,51 @@ en:
         parent: "Category parent: (optional)"
         choose: "Choose empty"
         submit: "Edit"
+    products:
+      index:
+        title: "Admin"
+        heading: "Management products"
+        add: "Add product"
+        index: "Index"
+        name: "Product name"
+        category: "Category"
+        image: "Image"
+        price: "Price"
+        rating: "Rating"
+        created_at: "Created at"
+        function: "Function"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure you want to delete the data?"
+        find_fail: "Product not found"
+      create:        
+        create_success: "Successfully added"
+        create_fail: "Add failed"
+      new:
+        title: "Admin"
+        heading: "Add Product"
+        category: "Category"
+        choose: "-- Choose category --"
+        name: "Product name"
+        detail: "Product detail"
+        image: "Image"
+        price: "Price ($)"
+        rating: "Rating"
+        submit: "Add"
+      update:
+        update_success: "Successfully updated"
+        update_fail: "Update failed"
+      destroy:
+        delete_success: "Successfully deleted"
+        delete_fail: "Deleted failed"
+      edit:
+        title: "Admin"
+        heading: "Edit Product"
+        category: "Category"
+        choose: "-- Choose category --"
+        name: "Product name"
+        detail: "Product detail"
+        image: "Image"
+        price: "Price ($)"
+        rating: "Rating"
+        submit: "Update"

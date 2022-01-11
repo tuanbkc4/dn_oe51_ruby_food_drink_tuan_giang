@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       get "/home", to: "static_page#home"
       delete "/logout", to: "static_page#destroy"
       resources :categories, except: %i(show)
+      resources :products, except: %i(show)
     end
   end
 end

@@ -6,7 +6,11 @@
         <div class="preview col-md-6">						
           <div class="preview-pic tab-content">
             <div class="tab-pane active" id="pic-1">
-              <%= image_tag(@product.image) %>
+              <% if check_image_tag @product %>
+                <td ><%= image_tag @product.image  %></td>
+              <% else %>
+                <td ><img src="/assets/product_default" alt="Product image"></td>
+              <% end %>
             </div>
           </div>						
         </div>
@@ -29,8 +33,7 @@
           <h4 class="price">
             <%= t ".price" %>
             <span>
-              <%= t ".unit_currency" %>
-              <%= @product.price %>
+              <%= number_to_currency(@product.price) %>
             </span>
           </h4>
           <div class="action">
