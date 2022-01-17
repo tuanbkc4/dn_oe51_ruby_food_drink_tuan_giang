@@ -8,7 +8,19 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     
+    resources :addresses
+    resources :orders do
+      put :cancel, on: :member
+    end
     resources :products, only: %i(index show)
+    resources :carts, only: %i(index destroy) do
+      collection do
+        post "/add_item_to_cart/:id", to: "carts#create", as: "add_item_to"
+        put "/update_cart/:id", to: "carts#update_cart", as: "update_item"
+        put "/update_rating/:id", to: "carts#update_rating_item", as: "update_rating_item"
+      end
+    end
+    resources :users, only: %i(show)
     
     namespace :admin do
       root "static_page#home"

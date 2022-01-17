@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :check_user, only: %i(show)
+
+  def show
+    @address = @user.addresses
+  end
+
   def new
     @user = User.new
   end
@@ -16,5 +22,13 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(User::USER_ATR)
+  end
+
+  def check_user
+    @user = User.find_by(id: params[:id])
+    return if @user
+
+    flash[:danger] = t ".not_found"
+    redirect_to root_url
   end
 end

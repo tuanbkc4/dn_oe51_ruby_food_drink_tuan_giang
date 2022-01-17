@@ -62,6 +62,7 @@ en:
       money10: "$10.50"
       quantity: "quantity :"
       see_details: "see product details"
+      add_to_cart: "Add to cart"
       banana: "organic banana"
       tomato: "organic tomato"
       orange: "organic orange"
@@ -79,6 +80,8 @@ en:
       subject: "subject"
       message: "message"
       send_message: "Send message"
+    lastest_product:
+      see_details: "See detail"    
   products:
     show:
       price: "Price: "
@@ -110,6 +113,78 @@ en:
     success: "Welcome to the food and drink website"
     admin_success: "Welcome to the food and drink admin page"
     not_allowed: "You do not have access"
+  users:
+    show:
+      title: "Profile"
+      username: "User Name:"
+      fullname: "Full Name:"
+      email: "Email:"
+      address_phone: "Address - Phone:"
+      default: "(default)"
+      order: "Order"
+      add_address: "Add address"
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "Are you sure you want to delete the data?"
+      not_found: "User not found"
+      not_found_add: "Address not found"  
+  addresses:
+    new:
+      title: "Add address"
+      address: "Address"
+      phone: "Phone number"
+      default: "Default(optional):"
+      add_address: "Add address"
+    create: 
+      create_success: "Successfully added"
+      create_fail: "Add failed"
+    update:
+      update_success: "Successfully updated"
+      update_fail: "Update failed"
+    destroy:
+      delete_success: "Successfully deleted"
+      delete_fail: "Deleted failed"
+  carts:
+    index:
+      title: "Carts"
+      confirm: "Are you sure you want to delete the data?"
+      update: "Product added to cart successfully"
+      add: "Product added to cart successfully"
+      remove: "Cart item deleted successfully"
+      update_qty: "Cart update successful"
+      update_fail: "Cart update failed"
+      total: "Total: "
+      heading: "My shopping cart"
+      checkout: "Checkout"
+      back: "Shopping continue"
+      not_found: "Item not found in cart"
+      empty: "empty shopping cart"
+  orders:
+    list_order:
+      heading: "Orders"
+      status: "Status: "
+      cancel: "Cancel"
+      total_price: "Total amount: "
+      cancel_success: "Canceled order successfully"
+      cancel_fail: "You cannot cancel an order"
+      confirm: "Are you sure you want to cancel the order?"
+    index:
+      title: "Place order"
+      order_form: "Order form"
+      your_order: "Your order"
+      product: "Product"
+      quantity: "Quantity"
+      unit_price: "Unit price"
+      total_price: "Total amount: "
+      fullname: "Full name"
+      Add_phone: "Address - Phone"
+      place_order: "Place order"
+      err: "Invalid record"
+      success: "Order success"
+      not_find: "Order not found"
+      add_address: "Please add the address"
+    show:
+      title: "Orders"
   admin:
     title_admin: "Admin"    
     layouts:

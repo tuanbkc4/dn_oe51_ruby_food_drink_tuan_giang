@@ -62,6 +62,7 @@ vi:
       money10: "$ 10,50"
       quantity: "Số lượng :"
       see_details: "Xem chi tiết sản phẩm"
+      add_to_cart: "Thêm vào giỏ hàng"
       banana: "chuối hữu cơ"
       tomato: "cà chua hữu cơ"
       orange: "cam hữu cơ"
@@ -79,12 +80,14 @@ vi:
       subject: "chủ đề"
       message: "tin nhắn"
       send_message: "Gửi tin nhắn"
+    lastest_product:
+      see_details: "Xem chi tiết"
   products:
     show:
       price: "Giá: "
       add_to_cart: "thêm vào giỏ hàng"
       buy_now: "mua ngay"
-      not_found: "Không tìm thấy sản phẩm"
+      not_found: "Không tìm thấy sản phẩm"      
   signup:
     title: "Đăng ký"
     username: "Username"
@@ -110,6 +113,78 @@ vi:
     success: "Chào mừng bạn đến với trang web đồ ăn và thức uống"
     admin_success: "Chào mừng bạn đến với trang quản trị thức ăn và đồ uống"
     not_allowed: "Bạn không có quyền truy cập"
+  users:
+    show:
+      title: "Hồ sơ"
+      username: "Tên tài khoản:"
+      fullname: "Họ tên:"
+      email: "Email:"
+      address_phone: "Địa chỉ - Sđt:"
+      default: "(mặc định)"
+      order: "Đơn hàng"
+      add_address: "Thêm địa chỉ"
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm: "Bạn có chắc chắn muốn xóa dữ liệu không?"
+      not_found: "Không tìm thấy người dùng"
+      not_found_add: "Không tìm thấy địa chỉ"            
+  addresses:
+    new:
+      title: "Thêm địa chỉ"
+      address: "Điạ chỉ:"
+      phone: "Số điện thoại:"
+      default: "Mặc định (không bắt buộc):"
+      add_address: "Thêm địa chỉ"
+    create: 
+      create_success: "Thêm thành công"
+      create_fail: "Thêm không thành công"
+    update:
+      update_success: "Cập nhật thành công"
+      update_fail: "Cập nhật thất bại"
+    destroy:
+      delete_success: "Xóa danh mục thành công"
+      delete_fail: "Xóa danh mục không thành công"
+  carts:
+    index:
+      title: "Giỏ hàng"
+      confirm: "Bạn có chắc chắn muốn xóa dữ liệu không?"
+      update: "Cập nhật sản phẩm vào giỏ hàng thành công"
+      add: "Thêm sản phẩm vào giỏ hàng thành công"
+      remove: "Xóa mục giỏ hàng thành công"
+      update_qty: "Cập nhật giỏ hàng thành công"
+      update_fail: "Cập nhật giỏ hàng không thành công"
+      total: "Tổng cộng: "
+      heading: "Giỏ hàng của tôi"
+      checkout: "Thanh toán"
+      back: "Tiếp tục Mua sắm"
+      not_found: "Không tìm thấy mặt hàng trong giỏ hàng"
+      empty: "Giỏ hàng rỗng"
+  orders:
+    list_order:
+      heading: "Đơn hàng"
+      status: "Trạng thái: "
+      cancel: "Hủy"
+      total_price: "Tổng số tiền: "
+      cancel_success: "Hủy đơn hàng thành công"
+      cancel_fail: "Bạn không thể hủy đơn hàng"
+      confirm: "Bạn có chắc muốn hủy đơn hàng?"
+    index:
+      title: "Đặt hàng"
+      order_form: "Đơn đặt hàng"
+      your_order: "Đơn hàng của bạn"
+      product: "Sản phẩm"
+      quantity: "Số lượng"
+      unit_price: "Đơn giá"
+      total_price: "Tổng số tiền: "
+      fullname: "Họ tên"
+      Add_phone: "Địa chỉ - Số điện thoại"
+      place_order: "Đặt hàng"
+      err: "Bản ghi không hợp lệ"
+      success: "Đặt hàng thành công"
+      not_find: "Không tìm thấy order"
+      add_address: "Vui lòng thêm địa chỉ"
+    show:
+      title: "Đơn hàng"
   admin:
     title_admin: "Admin"
     layouts:

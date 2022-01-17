@@ -31,11 +31,13 @@
               <td><%= page_index params[:page], index %></td>              
               <td><%= product.name %></td>
               <td><%= product.category.name %></td>
-              <% if check_image_tag product %>
-                <td ><%= image_tag product.image  %></td>
-              <% else %>
-                <td ><img src="/assets/product_default" alt="Product image"></td>
-              <% end %>
+              <td>
+                <% if check_image_tag product %>
+                  <%= image_tag product.image  %>
+                <% else %>
+                  <img src="/assets/product_default" alt="Product image">
+                <% end %>
+              </td>
               <td><%= number_to_currency(product.price) %></td>
               <td><%= product.rating %></td>
               <td><%= product.created_at.strftime("%d/%m/%Y") %></td>

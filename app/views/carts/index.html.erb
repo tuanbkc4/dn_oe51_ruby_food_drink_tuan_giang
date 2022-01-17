@@ -1,0 +1,31 @@
+<% provide :title, t(".title") %>
+<div class="container container_cart">
+  <div class="row mt-5">
+    <div class="col-10">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <div class="row">
+              <div class="col-xs-6">
+                <h5><%= t ".heading" %></h5>
+              </div>
+              <div class="col-xs-6 continue_shop">
+                <h5><%= link_to t(".back"), root_url %></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="panel-body">
+          <%= render :partial => "cart_item", collection: @carts, as: :item %>			
+        </ul>
+        <div class="panel-footer">
+          <div class="row text-center cart_checkout">
+            <h4 class="text-right"><%= t ".total" %> <strong><%= number_to_currency(total_all_price) %></strong></h4>
+            <%= link_to t(".checkout"), orders_path, class: "btn continue btn-checkout", method: :post, data: { confirm: current_user ? nil : "Vui lòng đăng nhập" } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "cart" %>
