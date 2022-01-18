@@ -9,3 +9,6 @@ regex:
 
 c_item:
   c_6: 6
+
+order:
+  status: [["pending", 1],["confirmed", 2], ["shipping", 3], ["completed", 4], ["cancelled", 5]]

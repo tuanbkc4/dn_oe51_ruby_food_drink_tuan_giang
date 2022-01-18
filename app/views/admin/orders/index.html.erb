@@ -1,0 +1,43 @@
+<% provide :title, t(".title") %>
+<div class="admin_manage_index">
+  <div class="row">
+    <div class="col-md-12 heading">
+      <h3><%= t ".heading" %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><%= t ".index" %></th>
+            <th scope="col"><%= t ".name" %></th>
+            <th scope="col"><%= t ".address" %></th>
+            <th scope="col"><%= t ".phone" %></th>
+            <th scope="col"><%= t ".total_price" %></th>
+            <th scope="col"><%= t ".status" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @orders.each_with_index do |order, index| %>
+            <tr>
+              <td><%= page_index params[:page], index %></td>              
+              <td><%= order.user.full_name %></td>
+              <td><%= order.address.address %></td>
+              <td><%= order.address.phone %></td>
+              <td><%= order.total_price %></td>
+              <td colspan="4">
+                <%= order.status %>
+                
+                <%= link_to t(".change"), edit_admin_order_path(id: order.id), class: "btn btn-success btn_status" %>
+              </td>
+            </tr>
+          <% end %>              
+        </tbody>
+      </table>
+      <div class="pagination">
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </div>     
+    </div>
+  </div>
+</div>

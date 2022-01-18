@@ -1,0 +1,17 @@
+<% provide :title, t(".title") %>
+<div class="admin_manage_index">
+  <div class="row">
+    <div class="col-md-12 heading">
+      <h3><%= t ".heading" %></h3>
+    </div>
+  </div>
+  <div class="row justify-content-center add_category">
+    <div class="col-6" >
+      <%= form_for(@order, url:  admin_order_path) do |f| %>
+        <%= f.label :status, t(".order_status"), class: "form-label" %>
+        <%= f.select :status, Settings.order.status, class: "form-control" %>
+        <%= f.submit t(".change"), class: "btn btn-primary btn_add_cat" %>  
+      <% end %>
+    </div>
+  </div>
+</div>

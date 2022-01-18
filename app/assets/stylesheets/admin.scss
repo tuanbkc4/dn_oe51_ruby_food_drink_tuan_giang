@@ -203,6 +203,12 @@
   margin-right: 12px;
 }
 
+.admin_manage_index .btn_status{
+  padding: 4px 8px;
+  margin: 0 0 0 5px;
+  color: $black;
+}
+
 .admin_manage_index table{
   margin-top: 8px;
   th,
@@ -280,6 +286,7 @@
 // add product
 .admin_manage_index .add_product{
   padding-bottom: 30px;
+  
   .btn_add{
     display: block;
     padding: 8px 20px;

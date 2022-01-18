@@ -21,7 +21,7 @@
         <div class="panel-footer">
           <div class="row text-center cart_checkout">
             <h4 class="text-right"><%= t ".total" %> <strong><%= number_to_currency(total_all_price) %></strong></h4>
-            <%= link_to t(".checkout"), orders_path, class: "btn continue btn-checkout", method: :post, data: { confirm: current_user ? nil : "Vui lòng đăng nhập" } %>
+            <%= link_to t(".checkout"), orders_path, class: "btn continue btn-checkout", method: :post, data: { confirm: current_user ? nil : t(".please_login") } %>
           </div>
         </div>
       </div>
