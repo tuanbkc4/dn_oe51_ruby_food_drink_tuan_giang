@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :addresses, dependent: :destroy
-  before_save{:email_downcase}
+  before_save :email_downcase
 
   USER_ATR = %w(user_name full_name email password password_confirmation).freeze
 
